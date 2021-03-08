@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>1</title>
+</head>
+<body>
+	
+	<h1>About learn code with durgesh</h1>
+	<h2>We are learnig spring boot</h2>
+	
+<h2 th:text="${name}"></h2>
+<h2 th:text="${currentDate}"></h2>
+
+<!-- Used to conver to uppercase -->>
+
+<h2 th:text="${ #strings.toUpperCase(name)}"></h2>
+
+<!-- Used to conver to uppercase -->>
+
+<h2 th:text="${ #strings.length(name)}"></h2>
+	
+	<h3>Name of the Owner is <span th:text="${name}"></span></h3>
+	
+<div th:with="a=5,b=7,n=${name}">
+
+<h1>vaue of A is <span th:text="${a}"></span></h1>
+<h1>vaue of b is <span th:text="${b}"></span></h1>
+<h1>vaue of n is <span th:text="${n}"></span></h1>
+
+<h1 th:text="'value of B is' + ${b}"></h1>
+<h1 th:text="'sum of ' + ${a}"></h1>
+
+</div>	
+	
+	
+</body>
+</html>
