@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Condition</title>
+</head>
+<body>
+	
+	
+	<!-- 
+	
+	Elvis Operator(similar as ternaory operator)
+	condtion ? "true" : "false"
+	
+	 -->
+	 		
+		<h1>Conditional HandlER</h1>
+		
+		<h1>ELVIS OPERATR - User is <span th:style="${isActive} ? 'color:green' : 'color:red' "  th:text = "${isActive} ? 'ACTIVE' : 'NOT ACTIVE' "></span></h1>
+
+		<!-- If Unless -->
+
+		<h1 th:if="${gender}=='M'">Male</h1>
+		<h1 th:unless="${gender}=='M'">FEMale</h1>
+		
+		<!-- SWITCH CASE -->	
+		
+		<div th:switch="${#lists.size(names)}">
+		
+		<h1 th:case="'0'">List contain 0 elements</h1>
+		<h2 th:case="'1'">List contain 1 eelements</h2>
+		<h1 th:case="*">List contain more than 1 elements</h1>
+		</div>	
+
+</body>
+</html>
