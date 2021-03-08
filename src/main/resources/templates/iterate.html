@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Example of loops</title>
+</head>
+<body>
+	<!-- 
+	
+	th:each
+	
+	It will traverse diff. types of data types obj like:  
+	
+	object ->Iterable (ex.list,set all collection)
+	
+	object -> map(key value pair)		(anything that implements map )
+	
+	array,single value
+	
+	//status is used to 
+	 -->
+	<h1>Going to traverse</h1>
+	
+	
+	<h1 th:text="${names}"></h1>
+	
+	<ul>
+		<li th:each="n  : ${names}">
+		
+		<span th:text="${n}"></span>
+		
+		</li>
+		
+	
+	</ul>
+	
+	<!-- 
+	
+Status is used for 
+
+index -curretn iteration index strting woth o
+count -  no of elements processed so far
+size - no. of lemenets in the list
+even/odd - check the current iteration is even or odd
+first - check the curetn iteration is first one 
+last - check the curetn iteration is last one
+
+	
+	 -->
+	<ul>
+		<li th:each="n ,status : ${names}">
+		
+		<span th:style="${status.odd} ? 'color:red' : '' " th:text="${status.index + 1} + ' ' +${n}"></span>
+		
+		</li>
+		
+	
+	</ul>
+	
+	
+	
+</body>
+</html>

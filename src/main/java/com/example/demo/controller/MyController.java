@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,5 +19,22 @@ public class MyController {
 		model.addAttribute("currentDate" ,new Date().toString());
 		return "about";
 	}
+	
+	@GetMapping("/looping")
+	public String iterateHnadler(Model model) {
+		
+		List names  = new ArrayList<>();
+		
+		names.add("demo");
+		names.add("demo1");
+		names.add("demo2");
+
+		names.add("demo3");
+		model.addAttribute("names",names);
+
+		
+		return "iterate";
+	}
+	
 	
 }
