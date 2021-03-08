@@ -71,5 +71,16 @@ public class MyController {
 	}
 	
 	
+	@GetMapping("/aboutnew")
+	public String newAbout(Model model) {
+		
+	
+
+		//model.addAttribute("title", "I lke to eat samosa");
+		//model.addAttribute("subtitle", LocalDateTime.now().toString());
+
+		return "aboutnew";
+	}
+	
 	
 }
