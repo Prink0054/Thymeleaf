@@ -58,5 +58,15 @@ public class MyController {
 	}
 	
 	
+	@GetMapping("/templates")
+	public String templates(Model model) {
+		
+	
+
+		
+		return "includingFragments";
+	}
+	
+	
 	
 }
