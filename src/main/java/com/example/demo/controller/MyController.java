@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -63,7 +64,9 @@ public class MyController {
 		
 	
 
-		
+		model.addAttribute("title", "I lke to eat samosa");
+		model.addAttribute("subtitle", LocalDateTime.now().toString());
+
 		return "includingFragments";
 	}
 	

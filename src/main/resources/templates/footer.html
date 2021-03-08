@@ -7,11 +7,13 @@
 <body>
 
 
-<footer id="footer" th:fragment="footer1">
+<footer id="footer" th:fragment="footer1(${title},${subtitle})">
 
 <div class="container" >
 
-<h1>ABout Prinkpal SINGH</h1>
+<h1 th:text="${title}"></h1>
+<h2 th:text="${subtitle}"></h2>
+
 <h2>Provide gOOD CONTENT ABOUT PROGRAMMING</h2>
 <h1>Feel free to contact as well as work with me</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dolores harum at fugit nihil qui cum quam illum tenetur accusantium modi sit veniam maxime sapiente inventore odio vel recusandae non perspiciatis nulla. Voluptas vero incidunt laudantium alias. Animi magnam saepe repudiandae quis cumque rem veritatis eligendi minima assumenda consequatur quaerat.</p>
